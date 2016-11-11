@@ -142,6 +142,9 @@ Creates `gapps.config.json`, which contains information about your Apps Script p
   Usage: gapps upload|push
 
   Upload back to Google Drive. Run from root of project directory
+
+  Options:
+    -c, --credentials <file>    Read stored credentials from <file>. Default: ~/.gapps
 ```
 
 Upload the project to Google Drive. Sources files from `./src` or the
