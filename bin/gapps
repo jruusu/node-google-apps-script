@@ -26,6 +26,7 @@ program
 program
   .command('upload')
   .option('-c, --credentials <file>', 'Read stored credentials from <file>. Default: ~/.gapps')
+  .option('-f, --config <file>', 'Read project configuration from <file>. Default: gapps.config.json')
   .description('Upload back to an Apps Script project in Google Drive. Run from root of project directory')
   .alias('push')
   .action(require(commands + '/upload'));
@@ -33,6 +34,7 @@ program
 program
   .command('init <fileId>')
   .option('-c, --credentials <file>', 'Read stored credentials from <file>. Default: ~/.gapps')
+  .option('-f, --config <file>', 'Read project configuration from <file>. Default: gapps.config.json')
   .option('-k, --key [key]')
   .option('-s, --subdir [subdir]')
   .option('-o, --overwrite')
@@ -42,6 +44,7 @@ program
 
 program
   .command('oauth-callback-url')
+  .option('-f, --config <file>', 'Read project configuration from <file>. Default: gapps.config.json')
   .description('Get the OAuth Callback URL for a project')
   .action(require(commands + '/oauthCallbackUrl'));
 
