@@ -31,6 +31,7 @@ program
 
 program
   .command('init <fileId>')
+  .option('-c, --credentials <file>', 'Read stored credentials from <file>. Default: ~/.gapps')
   .option('-k, --key [key]')
   .option('-s, --subdir [subdir]')
   .option('-o, --overwrite')
