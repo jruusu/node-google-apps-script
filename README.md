@@ -129,6 +129,7 @@ Performs the authentication flow described in the quickstart above.
   Initialize project locally. The external Apps Script project must exist.
 
   Options:
+    -f, --config <file>         Write project configuration to <file>. Default: gapps.config.json
     -k, --key [key]
     -s, --subdir [subdir]
     -o, --overwrite
@@ -145,6 +146,7 @@ Creates `gapps.config.json`, which contains information about your Apps Script p
 
   Options:
     -c, --credentials <file>    Read stored credentials from <file>. Default: ~/.gapps
+    -f, --config <file>         Read project configuration from <file>. Default: gapps.config.json
 ```
 
 Upload the project to Google Drive. Sources files from `./src` or the
@@ -156,6 +158,9 @@ configured subdirectory.
   Usage: gapps deployment oauth-callback-url
 
   Get the OAuth Callback URL for a project
+
+  Options:
+    -f, --config <file>         Read project configuration from <file>. Default: gapps.config.json
 ```
 
 Returns the OAuth Callback URL required by most 3rd-party OAuth services.
