@@ -113,6 +113,7 @@ Check out Matt Hessinger's blog post: [Advanced development process with apps](h
 
   Options:
 
+    -c, --credentials <file> Write credentials to <file>. Default: ~/.gapps
     -b, --no-launch-browser  Do not use a local webserver to capture oauth code
                               and instead require copy/paste of key returned in
                               the browser after authorization completes.
