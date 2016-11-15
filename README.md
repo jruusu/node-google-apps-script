@@ -129,6 +129,7 @@ Performs the authentication flow described in the quickstart above.
   Initialize project locally. The external Apps Script project must exist.
 
   Options:
+    -c, --credentials <file>    Read stored credentials from <file>. Default: ~/.gapps
     -k, --key [key]
     -s, --subdir [subdir]
     -o, --overwrite
