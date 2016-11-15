@@ -11,12 +11,13 @@ program
 
 program
   .command('auth <path/to/client/secret.json>')
+  .option('-c, --credentials <file>', 'Write credentials to <file>. Default: ~/.gapps')
   .option('-b, --no-launch-browser',
     'Do not use a local webserver to capture oauth code and instead require copy/paste')
   .option('-p, --port [port]', 'Port to use for webserver')
   .description('Authorize gapps to use the Google Drive API')
   .action(function(clientSecretPath, options) {
-    require(commands + '/auth')(clientSecretPath, options.launchBrowser)
+    require(commands + '/auth')(clientSecretPath, options.launchBrowser, options.credentials)
       .then(function() {
         process.exit(0);
       });
